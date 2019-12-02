@@ -1,0 +1,259 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.4.4                      
+******************************************************************************
+>> Linked Wed May 24 15:17:01 2017
+
+OUTPUT FILE NAME:   <dsp2lab2.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00005bc0
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  vecs                  00000000   00000220  00000200  00000020  RWIX
+  IRAM                  00000220   000fffe0  0000638c  000f9c54  RWIX
+  CE0                   80000000   01000000  00004bc4  00ffb43c  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+vectors    0    00000000    00000200     
+                  00000000    00000200     vectors11.obj (vectors)
+
+.cinit     0    00000220    0000403c     
+                  00000220    00003e94     main.obj (.cinit)
+                  000040b4    00000004     --HOLE-- [fill = 0]
+                  000040b8    0000012c     csl6713.lib : csl_irq.obj (.cinit)
+                  000041e4    00000004     --HOLE-- [fill = 0]
+                  000041e8    0000002c     rts6700.lib : exit.obj (.cinit)
+                  00004214    00000004     --HOLE-- [fill = 0]
+                  00004218    0000001c                 : _lock.obj (.cinit)
+                  00004234    00000004     --HOLE-- [fill = 0]
+                  00004238    00000019     c6xdskinit_pcm.obj (.cinit)
+                  00004251    00000007     --HOLE-- [fill = 0]
+                  00004258    00000004     (.pad.cinit) [fill = 0]
+
+.bss       0    00000220    00000000     UNINITIALIZED
+
+.data      0    00000220    00000000     UNINITIALIZED
+
+.text      0    00004260    00001b20     
+                  00004260    00000800     main.obj (.text)
+                  00004a60    00000740     c6xdskinit_pcm.obj (.text)
+                  000051a0    00000240     rts6700.lib : memcpy62.obj (.text:_memcpy)
+                  000053e0    000001c0     csl6713.lib : csl_irq.obj (.text:_IRQ_map)
+                  000055a0    00000160     rts6700.lib : autoinit.obj (.text:__auto_init)
+                  00005700    00000140     main.obj (.text:retain)
+                  00005840    00000120     rts6700.lib : exit.obj (.text:_exit)
+                  00005960    00000100                 : remi.obj (.text:__remi)
+                  00005a60    000000c0                 : cpy_tbl.obj (.text:_copy_in)
+                  00005b20    000000a0     csl6713.lib : csl_irq.obj (.text:_setMux)
+                  00005bc0    00000080     rts6700.lib : boot.obj (.text:_c_int00)
+                  00005c40    00000040     csl6713.lib : csl_irq.obj (.text:_IRQ_enable)
+                  00005c80    00000040     rts6700.lib : args_main.obj (.text:__args_main)
+                  00005cc0    00000020     csl6713.lib : csl_irq.obj (.text:_IRQ_globalDisable)
+                  00005ce0    00000020                 : csl_irq.obj (.text:_IRQ_globalEnable)
+                  00005d00    00000020                 : csl_irq.obj (.text:_IRQ_nmiEnable)
+                  00005d20    00000020     rts6700.lib : _lock.obj (.text:__nop)
+                  00005d40    00000020                 : exit.obj (.text:_abort)
+                  00005d60    00000020     csl6713.lib : csl_irq.obj (.text)
+
+.stack     0    00005d80    00000800     UNINITIALIZED
+                  00005d80    00000008     rts6700.lib : boot.obj (.stack)
+                  00005d88    000007f8     --HOLE--
+
+.switch    0    00006580    00000030     
+                  00006580    00000030     c6xdskinit_pcm.obj (.switch:_config_Interrupt_Selector)
+
+.far       0    80000000    00004bc4     UNINITIALIZED
+                  80000000    00004ab0     main.obj (.far)
+                  80004ab0    000000f4     csl6713.lib : csl_irq.obj (.far)
+                  80004ba4    0000000c     c6xdskinit_pcm.obj (.far)
+                  80004bb0    0000000c     rts6700.lib : exit.obj (.far)
+                  80004bbc    00000008                 : _lock.obj (.far)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00000220   $bss
+00000220   .bss
+00000220   .data
+00004260   .text
+00005d40   C$$EXIT
+80004ba4   _Act_Fs
+00005c40   _IRQ_enable
+00005cc0   _IRQ_globalDisable
+00005ce0   _IRQ_globalEnable
+000053e0   _IRQ_map
+00005d00   _IRQ_nmiEnable
+80004b9c   __IRQ_dispatchTable
+80004ad8   __IRQ_eventTable
+00005d60   __IRQ_hookFetchPacket
+80004b5c   __IRQ_intTable
+00006580   __STACK_END
+00000800   __STACK_SIZE
+00000001   __TI_args_main
+80004bb8   ___TI_enable_exit_profile_output
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+00000220   ___bss__
+ffffffff   ___c_args__
+00000220   ___cinit__
+00000220   ___data__
+00000220   ___edata__
+00000220   ___end__
+00005d80   ___etext__
+ffffffff   ___pinit__
+00004260   ___text__
+00005c80   __args_main
+000055a0   __auto_init
+00005960   __c6xabi_remi
+80004bb0   __cleanup_ptr
+80004bb4   __dtors_ptr
+80004bbc   __lock
+00005d20   __nop
+00005960   __remi
+00005d80   __stack
+80004bc0   __unlock
+00005d40   _abort
+80004688   _bufferin
+80003e88   _bufferout
+00004ebc   _c6x11_dsk_init
+00005bc0   _c_int00
+00004f4c   _comm_intr
+00004f18   _comm_poll
+00004acc   _config_Interrupt_Selector
+00005a60   _copy_in
+80003e80   _data
+00004a60   _enableGlobalINT
+00004a78   _enableNMI
+00004a90   _enableSpecificINT
+00005840   _exit
+000049b8   _init_hw_interrupts
+00004fc8   _input_left_sample
+00005048   _input_leftright_sample
+00005008   _input_right_sample
+00004fa4   _input_sample
+00004260   _main
+0000517c   _mcbsp1_activate
+00004d30   _mcbsp1_init
+00004db8   _mcbsp1_read
+00004e44   _mcbsp1_write
+80004bac   _mcbspData
+000051a0   _memcpy
+80003e84   _n
+000050b0   _output_left_sample
+00005154   _output_leftright_sample
+00005108   _output_right_sample
+00005088   _output_sample
+80004ba8   _polling
+00005700   _serial_port_rcv_isr
+80000000   _sine8000
+80004a88   _x
+80004a9c   _y
+ffffffff   binit
+00000220   cinit
+00000220   edata
+00000220   end
+00005d80   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000220   $bss
+00000220   .bss
+00000220   .data
+00000220   ___bss__
+00000220   ___cinit__
+00000220   ___data__
+00000220   ___edata__
+00000220   ___end__
+00000220   cinit
+00000220   edata
+00000220   end
+00000800   __STACK_SIZE
+00004260   .text
+00004260   ___text__
+00004260   _main
+000049b8   _init_hw_interrupts
+00004a60   _enableGlobalINT
+00004a78   _enableNMI
+00004a90   _enableSpecificINT
+00004acc   _config_Interrupt_Selector
+00004d30   _mcbsp1_init
+00004db8   _mcbsp1_read
+00004e44   _mcbsp1_write
+00004ebc   _c6x11_dsk_init
+00004f18   _comm_poll
+00004f4c   _comm_intr
+00004fa4   _input_sample
+00004fc8   _input_left_sample
+00005008   _input_right_sample
+00005048   _input_leftright_sample
+00005088   _output_sample
+000050b0   _output_left_sample
+00005108   _output_right_sample
+00005154   _output_leftright_sample
+0000517c   _mcbsp1_activate
+000051a0   _memcpy
+000053e0   _IRQ_map
+000055a0   __auto_init
+00005700   _serial_port_rcv_isr
+00005840   _exit
+00005960   __c6xabi_remi
+00005960   __remi
+00005a60   _copy_in
+00005bc0   _c_int00
+00005c40   _IRQ_enable
+00005c80   __args_main
+00005cc0   _IRQ_globalDisable
+00005ce0   _IRQ_globalEnable
+00005d00   _IRQ_nmiEnable
+00005d20   __nop
+00005d40   C$$EXIT
+00005d40   _abort
+00005d60   __IRQ_hookFetchPacket
+00005d80   ___etext__
+00005d80   __stack
+00005d80   etext
+00006580   __STACK_END
+80000000   _sine8000
+80003e80   _data
+80003e84   _n
+80003e88   _bufferout
+80004688   _bufferin
+80004a88   _x
+80004a9c   _y
+80004ad8   __IRQ_eventTable
+80004b5c   __IRQ_intTable
+80004b9c   __IRQ_dispatchTable
+80004ba4   _Act_Fs
+80004ba8   _polling
+80004bac   _mcbspData
+80004bb0   __cleanup_ptr
+80004bb4   __dtors_ptr
+80004bb8   ___TI_enable_exit_profile_output
+80004bbc   __lock
+80004bc0   __unlock
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[84 symbols]

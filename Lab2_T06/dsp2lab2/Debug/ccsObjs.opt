@@ -1,0 +1,1 @@
+"./vectors11.obj" "./main.obj" "./c6xdskinit_pcm.obj" "../C6713.cmd" -l"C:\Program Files\C6xCSL\lib_3x\csl6713.lib" -l"C:\DSK6713\c6000\dsk6713\lib\dsk6713bsl.lib" -l"C:/Users/george/Desktop/rts6700.lib" 
