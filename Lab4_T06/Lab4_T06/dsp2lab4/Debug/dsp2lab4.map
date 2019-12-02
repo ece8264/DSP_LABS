@@ -1,0 +1,245 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.4.4                      
+******************************************************************************
+>> Linked Tue May 23 23:40:35 2017
+
+OUTPUT FILE NAME:   <dsp2lab4.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00005ba0
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  vecs                  00000000   00000220  00000200  00000020  RWIX
+  IRAM                  00000220   0000ffe0  00006394  00009c4c  RWIX
+  CE0                   80000000   01000000  00004c9c  00ffb364  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+vectors    0    00000000    00000200     
+                  00000000    00000200     vectors11.obj (vectors)
+
+.cinit     0    00000220    0000404c     
+                  00000220    00003ea4     main.obj (.cinit)
+                  000040c4    00000004     --HOLE-- [fill = 0]
+                  000040c8    0000012c     csl6713.lib : csl_irq.obj (.cinit)
+                  000041f4    00000004     --HOLE-- [fill = 0]
+                  000041f8    0000002c     rts6700.lib : exit.obj (.cinit)
+                  00004224    00000004     --HOLE-- [fill = 0]
+                  00004228    0000001c                 : _lock.obj (.cinit)
+                  00004244    00000004     --HOLE-- [fill = 0]
+                  00004248    00000019     c6xdskinit_pcm.obj (.cinit)
+                  00004261    00000007     --HOLE-- [fill = 0]
+                  00004268    00000004     (.pad.cinit) [fill = 0]
+
+.bss       0    00000220    00000000     UNINITIALIZED
+
+.data      0    00000220    00000000     UNINITIALIZED
+
+.const     0    0000426c    00000008     
+                  0000426c    00000008     rts6700.lib : divf.obj (.const:.string:_initial_approx$1)
+
+.text      0    00004280    00001b40     
+                  00004280    00000ae0     main.obj (.text)
+                  00004d60    000004a0     rts6700.lib : divf.obj (.text:__divf)
+                  00005200    00000240                 : memcpy62.obj (.text:_memcpy)
+                  00005440    000001c0     csl6713.lib : csl_irq.obj (.text:_IRQ_map)
+                  00005600    00000160     rts6700.lib : autoinit.obj (.text:__auto_init)
+                  00005760    00000120                 : exit.obj (.text:_exit)
+                  00005880    00000100                 : remi.obj (.text:__remi)
+                  00005980    000000c0                 : frcmpyf_div.obj (.text:__frcmpyf_div)
+                  00005a40    000000c0                 : cpy_tbl.obj (.text:_copy_in)
+                  00005b00    000000a0     csl6713.lib : csl_irq.obj (.text:_setMux)
+                  00005ba0    00000080     rts6700.lib : boot.obj (.text:_c_int00)
+                  00005c20    00000040     csl6713.lib : csl_irq.obj (.text:_IRQ_enable)
+                  00005c60    00000040     rts6700.lib : divf.obj (.text:___isnanf)
+                  00005ca0    00000040                 : args_main.obj (.text:__args_main)
+                  00005ce0    00000020     csl6713.lib : csl_irq.obj (.text:_IRQ_globalDisable)
+                  00005d00    00000020                 : csl_irq.obj (.text:_IRQ_globalEnable)
+                  00005d20    00000020                 : csl_irq.obj (.text:_IRQ_nmiEnable)
+                  00005d40    00000020     rts6700.lib : _lock.obj (.text:__nop)
+                  00005d60    00000020                 : exit.obj (.text:_abort)
+                  00005d80    00000020     csl6713.lib : csl_irq.obj (.text)
+                  00005da0    00000020     main.obj (.text:retain)
+
+.stack     0    00005dc0    00000800     UNINITIALIZED
+                  00005dc0    00000008     rts6700.lib : boot.obj (.stack)
+                  00005dc8    000007f8     --HOLE--
+
+.far       0    80000000    00004c9c     UNINITIALIZED
+                  80000000    00004b88     main.obj (.far)
+                  80004b88    000000f4     csl6713.lib : csl_irq.obj (.far)
+                  80004c7c    0000000c     c6xdskinit_pcm.obj (.far)
+                  80004c88    0000000c     rts6700.lib : exit.obj (.far)
+                  80004c94    00000008                 : _lock.obj (.far)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00000220   $bss
+00000220   .bss
+00000220   .data
+00004280   .text
+00005d60   C$$EXIT
+80004c7c   _Act_Fs
+00005c20   _IRQ_enable
+00005ce0   _IRQ_globalDisable
+00005d00   _IRQ_globalEnable
+00005440   _IRQ_map
+00005d20   _IRQ_nmiEnable
+80004c74   __IRQ_dispatchTable
+80004bb0   __IRQ_eventTable
+00005d80   __IRQ_hookFetchPacket
+80004c34   __IRQ_intTable
+000065c0   __STACK_END
+00000800   __STACK_SIZE
+00000001   __TI_args_main
+80004c90   ___TI_enable_exit_profile_output
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+00000220   ___bss__
+ffffffff   ___c_args__
+00000220   ___cinit__
+00000220   ___data__
+00000220   ___edata__
+00000220   ___end__
+00005dc0   ___etext__
+ffffffff   ___pinit__
+00004280   ___text__
+00005ca0   __args_main
+00005600   __auto_init
+00005880   __c6xabi_remi
+80004c88   __cleanup_ptr
+00004d60   __divf
+80004c8c   __dtors_ptr
+00005980   __frcmpyf_div
+80004c94   __lock
+00005d40   __nop
+00005880   __remi
+00005dc0   __stack
+80004c98   __unlock
+80004778   _a
+00005d60   _abort
+80004774   _b
+80004788   _bufferin
+80003f70   _bufferout
+00005ba0   _c_int00
+00005a40   _copy_in
+80003ea8   _d
+80003f20   _e
+00005760   _exit
+80004780   _i
+00004cac   _init_hw_interrupts
+80004784   _k
+00004580   _main
+80004c84   _mcbspData
+00005200   _memcpy
+8000477c   _n
+00004280   _nlms
+80003f48   _noise
+80004c80   _polling
+80004770   _s
+00005da0   _serial_port_rcv_isr
+80000000   _sine8000
+80003ef8   _w
+80003e80   _x
+80003ed0   _y
+ffffffff   binit
+00000220   cinit
+00000220   edata
+00000220   end
+00005dc0   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000220   $bss
+00000220   .bss
+00000220   .data
+00000220   ___bss__
+00000220   ___cinit__
+00000220   ___data__
+00000220   ___edata__
+00000220   ___end__
+00000220   cinit
+00000220   edata
+00000220   end
+00000800   __STACK_SIZE
+00004280   .text
+00004280   ___text__
+00004280   _nlms
+00004580   _main
+00004cac   _init_hw_interrupts
+00004d60   __divf
+00005200   _memcpy
+00005440   _IRQ_map
+00005600   __auto_init
+00005760   _exit
+00005880   __c6xabi_remi
+00005880   __remi
+00005980   __frcmpyf_div
+00005a40   _copy_in
+00005ba0   _c_int00
+00005c20   _IRQ_enable
+00005ca0   __args_main
+00005ce0   _IRQ_globalDisable
+00005d00   _IRQ_globalEnable
+00005d20   _IRQ_nmiEnable
+00005d40   __nop
+00005d60   C$$EXIT
+00005d60   _abort
+00005d80   __IRQ_hookFetchPacket
+00005da0   _serial_port_rcv_isr
+00005dc0   ___etext__
+00005dc0   __stack
+00005dc0   etext
+000065c0   __STACK_END
+80000000   _sine8000
+80003e80   _x
+80003ea8   _d
+80003ed0   _y
+80003ef8   _w
+80003f20   _e
+80003f48   _noise
+80003f70   _bufferout
+80004770   _s
+80004774   _b
+80004778   _a
+8000477c   _n
+80004780   _i
+80004784   _k
+80004788   _bufferin
+80004bb0   __IRQ_eventTable
+80004c34   __IRQ_intTable
+80004c74   __IRQ_dispatchTable
+80004c7c   _Act_Fs
+80004c80   _polling
+80004c84   _mcbspData
+80004c88   __cleanup_ptr
+80004c8c   __dtors_ptr
+80004c90   ___TI_enable_exit_profile_output
+80004c94   __lock
+80004c98   __unlock
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[76 symbols]
